@@ -1,4 +1,6 @@
 ﻿using Task;
 
 int[,] matr = Matrix.GenerateMatrix(6, 6);
-Matrix.PrintMatrix(matr);
+MatrixConsole.PrintMatrix(matr);
+int count = Matrix.CountPositiv(matr);
+MatrixConsole.PrintCount(count);
