@@ -86,5 +86,23 @@ namespace Task
             }
             return count;
         }
+        public static int ColumnWithZero(int[,] matrix, int rows, int cols)
+        {
+            int count = 0;
+            for (int j = 0; j < cols; j++)
+            {
+                int count1 = 0;
+                for (int i = 0; i < rows; i++)
+                {
+                    if (matrix[i, j] == 0)
+                    {
+                        count1++;
+                    }
+                }
+                if (count1 != 0)
+                    count++;
+            }
+            return count;
+        }
     }
 }

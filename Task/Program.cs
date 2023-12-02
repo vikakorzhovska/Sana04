@@ -8,3 +8,5 @@ int max = Matrix.MaxNumber(matr);
 MatrixConsole.PrintMax(max);
 int rows = Matrix.RowsWithoutZero(matr);
 MatrixConsole.PrintRowsWithoutZero(rows);
+int cols = Matrix.ColumnWithZero(matr, 5, 5); 
+MatrixConsole.PrintColsWithZero(cols);

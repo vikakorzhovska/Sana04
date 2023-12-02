@@ -32,5 +32,10 @@ namespace Task
             Console.WriteLine("Count of rows");
             Console.WriteLine($"{count}");
         }
+        public static void PrintColsWithZero(int count)
+        {
+            Console.WriteLine("Count of cols");
+            Console.WriteLine($"{count}");
+        }
     }
 }
