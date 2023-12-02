@@ -27,5 +27,10 @@ namespace Task
             Console.WriteLine("Maximum number");
             Console.WriteLine($"{max}");
         }
+        public static void PrintRowsWithoutZero(int count)
+        {
+            Console.WriteLine("Count of rows");
+            Console.WriteLine($"{count}");
+        }
     }
 }

@@ -6,3 +6,5 @@ int count = Matrix.CountPositiv(matr);
 MatrixConsole.PrintCount(count);
 int max = Matrix.MaxNumber(matr);
 MatrixConsole.PrintMax(max);
+int rows = Matrix.RowsWithoutZero(matr);
+MatrixConsole.PrintRowsWithoutZero(rows);
