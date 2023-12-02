@@ -10,7 +10,7 @@ namespace Task
 {
     public class Matrix
     {
-        public static int[,] GenerateMatrix(int rowCount, int columnCount, int minValue = -5, int maxValue = 5)
+        public static int[,] GenerateMatrix(int rowCount, int columnCount, int minValue = -5, int maxValue = 10)
         {
         int[,] matrix = new int[rowCount, columnCount];
             Random random = new Random();
@@ -129,6 +129,26 @@ namespace Task
             }
 
             return rowWithLongestSeries;
+        }
+        public static int[] ProductPositiv(int[,] matrix)
+        {
+            int rows = matrix.GetLength(0);
+            int[] products = new int[rows];
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                products[i] = 1;
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[i, j] < 0)
+                    {
+                        products[i] = 0;
+                        break;
+                    }
+
+                    products[i] *= matrix[i, j];
+                }
+            }
+            return products;
         }
     }
 }

@@ -12,3 +12,5 @@ int cols = Matrix.ColumnWithZero(matr, 5, 5);
 MatrixConsole.PrintColsWithZero(cols);
 int longest = Matrix.RowWithLongestSeries(matr); 
 MatrixConsole.PrintRowWithLongestSerie(longest);
+int[] product = Matrix.ProductPositiv(matr);
+MatrixConsole.PrintProduct(product); 

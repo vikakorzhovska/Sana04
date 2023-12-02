@@ -42,5 +42,14 @@ namespace Task
             Console.WriteLine("Line number with longest series of identical elements");
             Console.WriteLine($"{rowWithLongest}");
         }
+        public static int PrintProduct(int[] products)
+        {
+            Console.WriteLine("Product in rows without negative elements");
+            for (int i = 0; i < products.Length; i++)
+            {
+                Console.WriteLine($"Row {i + 1}: {products[i]}");
+            }
+            return 1; 
+        }
     }
 }
