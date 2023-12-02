@@ -10,7 +10,7 @@ namespace Task
 {
     public class Matrix
     {
-        public static int[,] GenerateMatrix(int rowCount, int columnCount, int minValue = -10, int maxValue = 10)
+        public static int[,] GenerateMatrix(int rowCount, int columnCount, int minValue = -5, int maxValue = 5)
         {
         int[,] matrix = new int[rowCount, columnCount];
             Random random = new Random();
@@ -103,6 +103,32 @@ namespace Task
                     count++;
             }
             return count;
+        }
+        public static int RowWithLongestSeries(int[,] matrix)
+        { 
+            int longest = 0;
+            int rowWithLongestSeries = -1;
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                int count = 1;
+
+                for (int j = 1; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[i, j] == matrix[i, j - 1])
+                    {
+                        count++;
+                    }
+                    
+                }
+                if (count > longest)
+                {
+                    longest = count;
+                    rowWithLongestSeries = i;
+                }
+            }
+
+            return rowWithLongestSeries;
         }
     }
 }

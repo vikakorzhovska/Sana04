@@ -37,5 +37,10 @@ namespace Task
             Console.WriteLine("Count of cols");
             Console.WriteLine($"{count}");
         }
+        public static void PrintRowWithLongestSerie(int rowWithLongest)
+        {
+            Console.WriteLine("Line number with longest series of identical elements");
+            Console.WriteLine($"{rowWithLongest}");
+        }
     }
 }

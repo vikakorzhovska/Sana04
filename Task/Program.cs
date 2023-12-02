@@ -10,3 +10,5 @@ int rows = Matrix.RowsWithoutZero(matr);
 MatrixConsole.PrintRowsWithoutZero(rows);
 int cols = Matrix.ColumnWithZero(matr, 5, 5); 
 MatrixConsole.PrintColsWithZero(cols);
+int longest = Matrix.RowWithLongestSeries(matr); 
+MatrixConsole.PrintRowWithLongestSerie(longest);
