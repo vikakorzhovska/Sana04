@@ -22,5 +22,10 @@ namespace Task
             Console.WriteLine("Number of positive elements");
             Console.WriteLine($"{count}");
         }
+        public static void PrintMax(int max)
+        {
+            Console.WriteLine("Maximum number");
+            Console.WriteLine($"{max}");
+        }
     }
 }

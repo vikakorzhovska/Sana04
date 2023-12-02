@@ -29,5 +29,42 @@ namespace Task
             }
             return count;
         }
+        public static int MaxNumber(int[,] matrix)
+        {
+            int max = -11;
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    int number = matrix[i, j];
+                    int repeat = CountRepeat(matrix, number);
+
+                    if (repeat > 1 && number > max)
+                    {
+                        max = number;
+                    }
+                }
+            }
+
+            return max;
+        }
+
+        public static int CountRepeat(int[,] matrix, int element)
+        {
+            int count = 0;
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[i, j] == element)
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
+        }
     }
 }
