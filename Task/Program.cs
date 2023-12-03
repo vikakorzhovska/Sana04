@@ -16,3 +16,5 @@ int[] product = Matrix.ProductPositiv(matr);
 MatrixConsole.PrintProduct(product);
 int maxSum = Matrix.MaxSum(matr); 
 MatrixConsole.PrintMaxSum(maxSum);
+int[] sum = Matrix.SumPositiv(matr);
+MatrixConsole.PrintSumCols(sum);

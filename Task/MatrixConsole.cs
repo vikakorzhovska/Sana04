@@ -56,5 +56,14 @@ namespace Task
             Console.WriteLine("The maximum among the sums of elements of diagonals");
             Console.WriteLine($"{maxSum}");
         }
+        public static int PrintSumCols(int[] sum)
+        {
+            Console.WriteLine("Sum in cols without negative elements");
+            for (int i = 0; i < sum.Length; i++)
+            {
+                Console.WriteLine($"Row {i + 1}: {sum[i]}");
+            }
+            return 1;
+        }
     }
 }

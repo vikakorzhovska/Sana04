@@ -179,5 +179,25 @@ namespace Task
             maxSum = Math.Max(maxSum1, maxSum2);
             return maxSum;
         }
+        public static int[] SumPositiv(int[,] matrix)
+        {
+            int cols = matrix.GetLength(1);
+            int[] sum = new int[cols];
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                sum[j] = 0;
+                for (int i = 0; i < matrix.GetLength(0); i++)
+                {
+                    if (matrix[i, j] < 0)
+                    {
+                        sum[j] = 0;
+                        break;
+                    }
+
+                    sum[j] += matrix[i, j];
+                }
+            }
+            return sum;
+        }
     }
 }
