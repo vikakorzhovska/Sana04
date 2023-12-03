@@ -51,5 +51,10 @@ namespace Task
             }
             return 1; 
         }
+        public static void PrintMaxSum(int maxSum)
+        {
+            Console.WriteLine("The maximum among the sums of elements of diagonals");
+            Console.WriteLine($"{maxSum}");
+        }
     }
 }

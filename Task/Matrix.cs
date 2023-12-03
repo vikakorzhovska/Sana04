@@ -150,5 +150,34 @@ namespace Task
             }
             return products;
         }
+        public static int MaxSum(int[,] matrix)
+        {
+            int maxSum1 = -11;
+            int maxSum2 = -11;
+            int maxSum;
+            int n = matrix.GetLength(0);
+            int m = matrix.GetLength(1);
+            for (int i = 0; i < n - 1; i++)
+            {
+                int sum = 0;
+                for (int j = 0; j + i + 1 < m; j++)
+                {
+                    sum += matrix[i + j + 1, j];
+                }
+                maxSum1 = Math.Max(maxSum1, sum);
+            }
+
+            for (int j = 1; j < m - 1; j++)
+            {
+                int sum = 0;
+                for (int i = 0; i + j + 1 < n; i++)
+                {
+                    sum += matrix[i, i + j + 1];
+                }
+                maxSum2 = Math.Max(maxSum2, sum);
+            }
+            maxSum = Math.Max(maxSum1, maxSum2);
+            return maxSum;
+        }
     }
 }

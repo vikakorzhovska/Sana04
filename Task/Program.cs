@@ -13,4 +13,6 @@ MatrixConsole.PrintColsWithZero(cols);
 int longest = Matrix.RowWithLongestSeries(matr); 
 MatrixConsole.PrintRowWithLongestSerie(longest);
 int[] product = Matrix.ProductPositiv(matr);
-MatrixConsole.PrintProduct(product); 
+MatrixConsole.PrintProduct(product);
+int maxSum = Matrix.MaxSum(matr); 
+MatrixConsole.PrintMaxSum(maxSum);
