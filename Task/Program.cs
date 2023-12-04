@@ -1,5 +1,7 @@
 ﻿using Task;
-
+using System.Text;
+Console.InputEncoding = Encoding.Unicode;
+Console.OutputEncoding = Encoding.Unicode;
 int[,] matr = Matrix.GenerateMatrix(5, 5);
 MatrixConsole.PrintMatrix(matr);
 int count = Matrix.CountPositiv(matr);
@@ -18,3 +20,5 @@ int maxSum = Matrix.MaxSum(matr);
 MatrixConsole.PrintMaxSum(maxSum);
 int[] sum = Matrix.SumPositiv(matr);
 MatrixConsole.PrintSumCols(sum);
+int minSum = Matrix.MinSum(matr);  
+MatrixConsole.PrintMinSum(minSum);

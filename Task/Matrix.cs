@@ -12,14 +12,14 @@ namespace Task
     {
         public static int[,] GenerateMatrix(int rowCount, int columnCount, int minValue = -5, int maxValue = 10)
         {
-        int[,] matrix = new int[rowCount, columnCount];
+            int[,] matrix = new int[rowCount, columnCount];
             Random random = new Random();
-            for (int i = 0;i < matrix.GetLength(0); i++)
+            for (int i = 0; i < matrix.GetLength(0); i++)
                 for (int j = 0; j < matrix.GetLength(1); j++)
                     matrix[i, j] = random.Next(minValue, maxValue);
-                    return matrix;
+            return matrix;
         }
-      
+
         public static int CountPositiv(int[,] matrix)
         {
             int count = 0;
@@ -81,7 +81,7 @@ namespace Task
                         count1++;
                     }
                 }
-                if(count1 == 0)
+                if (count1 == 0)
                     count++;
             }
             return count;
@@ -105,7 +105,7 @@ namespace Task
             return count;
         }
         public static int RowWithLongestSeries(int[,] matrix)
-        { 
+        {
             int longest = 0;
             int rowWithLongestSeries = -1;
 
@@ -119,7 +119,7 @@ namespace Task
                     {
                         count++;
                     }
-                    
+
                 }
                 if (count > longest)
                 {
@@ -198,6 +198,31 @@ namespace Task
                 }
             }
             return sum;
+        }
+        public static int MinSum(int[,] matrix)
+        {
+            int minSum = -11;
+
+            for (int k = 0; k < matrix.GetLength(0) + matrix.GetLength(1) - 1; k++)
+            {
+                int sum = 0;
+
+                for (int i = 0; i < matrix.GetLength(0); i++)
+                {
+                    int j = k - i;
+
+                    if (j >= 0 && j < matrix.GetLength(1))
+                    {
+                        sum += Math.Abs(matrix[i, j]);
+                    }
+                }
+
+                if (sum < minSum)
+                {
+                    minSum = sum;
+                }
+            }
+            return minSum;
         }
     }
 }
