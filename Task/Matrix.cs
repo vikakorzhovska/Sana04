@@ -86,13 +86,13 @@ namespace Task
             }
             return count;
         }
-        public static int ColumnWithZero(int[,] matrix, int rows, int cols)
+        public static int ColumnWithZero(int[,] matrix)
         {
             int count = 0;
-            for (int j = 0; j < cols; j++)
+            for (int j = 0; j < matrix.GetLength(1); j++)
             {
                 int count1 = 0;
-                for (int i = 0; i < rows; i++)
+                for (int i = 0; i < matrix.GetLength(0); i++)
                 {
                     if (matrix[i, j] == 0)
                     {
@@ -251,6 +251,23 @@ namespace Task
                 }
             }
             return sum;
+        }
+        public static int[,] TransposeMatrix(int[,] matrix)
+        {
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+
+            int[,] newMatr = new int[rows,cols];
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    newMatr[j, i] = matrix[i, j];
+                }
+            }
+
+            return newMatr;
         }
     }
 }
