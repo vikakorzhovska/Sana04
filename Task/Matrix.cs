@@ -224,5 +224,33 @@ namespace Task
             }
             return minSum;
         }
+        public static int[] SumCols(int[,] matrix)
+        {
+            int cols = matrix.GetLength(1);
+            int[] sum = new int[cols];
+
+            for (int j = 0; j < cols; j++)
+            {
+                int neg = 0;
+
+                for (int i = 0; i < matrix.GetLength(0); i++)
+                {
+                    if (matrix[i, j] < 0)
+                    {
+                        neg = 1;
+                        break;
+                    }
+                }
+
+                if (neg == 1)
+                {
+                    for (int i = 0; i < matrix.GetLength(0); i++)
+                    {
+                        sum[j] += matrix[i, j];
+                    }
+                }
+            }
+            return sum;
+        }
     }
 }

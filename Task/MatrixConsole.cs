@@ -70,5 +70,14 @@ namespace Task
             Console.WriteLine("Мінімум серед сум модулів елементів діагоналей, паралельних побічній діагоналі матриці");
             Console.WriteLine($"{minSum}");
         }
+        public static int PrintSumColsNeg(int[] sum) 
+        {
+            Console.WriteLine("Сума елементів в тих стовпцях, які  містять хоча б один від’ємний елемент");
+            for (int i = 0; i < sum.Length; i++)
+            {
+                Console.WriteLine($"Row {i + 1}: {sum[i]}");
+            }
+            return 1;
+        }
     }
 }

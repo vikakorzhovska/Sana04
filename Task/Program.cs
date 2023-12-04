@@ -22,3 +22,5 @@ int[] sum = Matrix.SumPositiv(matr);
 MatrixConsole.PrintSumCols(sum);
 int minSum = Matrix.MinSum(matr);  
 MatrixConsole.PrintMinSum(minSum);
+int[] sumCols = Matrix.SumCols(matr);
+MatrixConsole.PrintSumColsNeg(sumCols);
