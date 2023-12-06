@@ -201,7 +201,7 @@ namespace Task
         }
         public static int MinSum(int[,] matrix)
         {
-            int minSum = -11;
+            int minSum = 11;
 
             for (int k = 0; k < matrix.GetLength(0) + matrix.GetLength(1) - 1; k++)
             {
